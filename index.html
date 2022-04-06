@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <fieldset>
+        <br><br><br>
+        <legend>CALCULATOR</legend>
+
+        <label for="">Input Value 1</label>
+        <input type="text" id="num1">
+<br>
+<br>
+        <label for="">Input Value 2</label>
+        <input type="text" id="num2">
+<br>
+<br>
+        <button type="button" onclick="myadd()">+</button>
+        <button type="button" onclick="mysub()">-</button>
+        <button type="button" onclick="mymul()">*</button>
+        <button type="button" onclick="mydiv()">/</button>
+        <button type="button" onclick="myclose()">CE</button>
+        <p id="output"></p>
+    </fieldset>
+    <script>
+        function myadd(){
+            a = parseFloat(document.getElementById('num1').value);
+            b = parseFloat(document.getElementById('num2').value);
+            sum = a + b;
+            document.getElementById("output").innerHTML=sum;
+        }
+        function mysub(){
+            a = parseFloat(document.getElementById('num1').value);
+            b = parseFloat(document.getElementById('num2').value);
+            sub = a - b;
+            document.getElementById("output").innerHTML=sub;
+        }
+        function mymul(){
+            a = parseFloat(document.getElementById('num1').value);
+            b = parseFloat(document.getElementById('num2').value);
+            mul = a * b;
+            document.getElementById("output").innerHTML=mul;
+        }
+        function mydiv(){
+            a = parseFloat(document.getElementById('num1').value);
+            b = parseFloat(document.getElementById('num2').value);
+            div = a / b;
+            document.getElementById("output").innerHTML=div;
+        }
+        function myclose(){
+            a = parseFloat(document.getElementById('num1').value);
+            b = parseFloat(document.getElementById('num2').value);
+            close = ('');
+            document.getElementById("output").innerHTML=close ;
+        }
+    </script>
+</body>
+</html>
