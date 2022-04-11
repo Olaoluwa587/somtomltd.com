@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <fieldset>
-        <br><br><br>
-        <legend>CALCULATOR</legend>
 
-        <label for="">Input Value 1</label>
+    <div id="container">
+
+        <h2>CALCULATOR</h2>
+
+        <h4 class="header">Input Value 1</h4>
         <input type="text" id="num1">
 <br>
 <br>
-        <label for="">Input Value 2</label>
+        <h4>Input Value 2</h4>
         <input type="text" id="num2">
 <br>
 <br>
@@ -25,36 +26,37 @@
         <button type="button" onclick="mymul()">*</button>
         <button type="button" onclick="mydiv()">/</button>
         <button type="button" onclick="myclose()">CE</button>
+
         <p id="output"></p>
-    </fieldset>
+    </div>
     <script>
-        function myadd(){
+        function myadd(a,b){
             a = parseFloat(document.getElementById('num1').value);
             b = parseFloat(document.getElementById('num2').value);
             sum = a + b;
             document.getElementById("output").innerHTML=sum;
         }
-        function mysub(){
+        function mysub(a,b){
             a = parseFloat(document.getElementById('num1').value);
             b = parseFloat(document.getElementById('num2').value);
             sub = a - b;
             document.getElementById("output").innerHTML=sub;
         }
-        function mymul(){
+        function mymul(a,b){
             a = parseFloat(document.getElementById('num1').value);
             b = parseFloat(document.getElementById('num2').value);
             mul = a * b;
             document.getElementById("output").innerHTML=mul;
         }
-        function mydiv(){
+        function mydiv(a,b){
             a = parseFloat(document.getElementById('num1').value);
             b = parseFloat(document.getElementById('num2').value);
             div = a / b;
             document.getElementById("output").innerHTML=div;
         }
         function myclose(){
-            a = parseFloat(document.getElementById('num1').value);
-            b = parseFloat(document.getElementById('num2').value);
+            document.getElementById('num1').value ='';
+            document.getElementById('num2').value ='';
             close = ('');
             document.getElementById("output").innerHTML=close ;
         }
